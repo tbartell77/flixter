@@ -11,6 +11,16 @@
     color: #38b6ff;
 }
 
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 /* 
 NAV
@@ -74,6 +84,14 @@ nav {
 LANDING
 */
 
+#landing-page {
+    height: 100vw;
+    background-color: #eef8ff;
+    overflow-x: hidden;
+    padding: 10px 20px 0 20px;
+    overflow: hidden;
+}
+
 .landing__wrapper {
     max-width: 100vw;
     padding: 10px 20px 0 20px;
@@ -99,41 +117,32 @@ LANDING
     font-size: 32px;
     padding-top: 20px;
     text-align: center;
-    max width: 600px;
+    max-width: 700px;
     text-shadow: 1px 3px 2px lightgray;
+    padding-bottom: 32px;
 }
-
-
-
-#landing-page {
-    height: 100vw;
-    background-color: #eef8ff;
-}
-
 
 .input__wrapper {
     width: 100%;
+    position: relative;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center
 }
 
 .movie__search--input {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 32px;
     background-color: #eef8ff;
     border-radius: 20px;
     border: 1px solid black;
+    color: #0a1f44;
     display: inline-block;
     height: 70px;
     line-height: 40px;
+    outline: none;
     padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
     font-size: 24px;
-    font-weight: 500;
-    position: absolute;
-    padding-left: 24px;
-    transition: border-color 600ms;
+    padding-left: 25px
 }
 
 .movie__search--input::placeholder {
@@ -151,4 +160,28 @@ LANDING
     outline-offset: 2px;
     border: 4px solid;
     border-color: #38b6ff;
+}
+
+button {
+   width: 200px;
+   margin-left: 20px;
+   font-size: 40px;
+   color: #eef8ff;
+   border-radius: 20px;
+   transition: all 300ms ease;
+}
+
+button.not__loading {
+    border: 3px solid #38b6ff;
+    background-color: #38b6ff;
+    box-shadow: 7px 7px 14px rgb(215, 215, 215);
+}
+
+button.not__loading:hover {
+    background-color: #eef8ff;
+    color: #38b6ff;
+}
+
+.button.not__loading:active {
+    transform: scale(.95);
 }
