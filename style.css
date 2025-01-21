@@ -185,4 +185,5 @@ button.not__loading:hover {
 
 button.not__loading:active {
     transform: scale(.95);
+    
 }
