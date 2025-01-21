@@ -169,6 +169,7 @@ button {
    color: #eef8ff;
    border-radius: 20px;
    transition: all 300ms ease;
+   cursor: pointer;
 }
 
 button.not__loading {
@@ -182,6 +183,6 @@ button.not__loading:hover {
     color: #38b6ff;
 }
 
-.button.not__loading:active {
+button.not__loading:active {
     transform: scale(.95);
 }
