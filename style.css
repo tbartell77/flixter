@@ -95,6 +95,8 @@ LANDING
 .landing__wrapper {
     max-width: 100vw;
     padding: 10px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .landing__text-wrapper {
@@ -185,5 +187,15 @@ button.not__loading:hover {
 
 button.not__loading:active {
     transform: scale(.95);
-    
+}
+
+.landing__img--wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing__img {
+    max-width: 400px;
 }
