@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flixter</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/2d9f8b38fc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="search.css" />
+    <script
+      src="https://kit.fontawesome.com/2d9f8b38fc.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js" defer></script>
   </head>
   <body>
     <header>
       <nav>
+        <div class="movie__background"></div>
         <div class="nav__container">
           <img
             class="logo"
@@ -35,32 +39,20 @@
             >
           </div>
         </div>
-      </nav>
-    </header>
-    <section id="landing-page">
-      <div class="container">
-        <div class="row">
-          <div class="landing__wrapper">
-            <div class="landing__text-wrapper">
-              <h1 class="landing__title">
-                America's most awarded online movie rental platform.
-              </h1>
-              <h2 class="landing__find">
-                FIND YOUR FAVORITE MOVIES WITH <span class="blue">FLIXTER</span>
-              </h2>
-              <div class="input__wrapper">
-                <input class="movie__search--input" type="text" placeholder="What do you want to watch?" />
-                <button onclick="handleLoader()" class="loader__wrapper">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-              </div>
-            </div>
-            <figure class="landing__img--wrapper">
-                <img class="landing__img" src="Assets/undraw_home-cinema_jdm1.svg" alt="">
-            </figure>
+        <div class="search__content--wrapper">
+          <h1 class="nav__heading">Browse our Movies</h1>
+          <div class="search__input--wrapper">
+            <input
+              class="movie__search--input"
+              placeholder="Find your favorite movie"
+              type="text"
+            />
+            <button onclick="handleLoader()" class="search__btn loader__wrapper">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </nav>
+    </header>
   </body>
 </html>

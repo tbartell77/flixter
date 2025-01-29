@@ -85,7 +85,7 @@ LANDING
 */
 
 #landing-page {
-    height: 100vw;
+    height: 100vh;
     background-color: #eef8ff;
     overflow-x: hidden;
     padding: 10px 20px 0 20px;
@@ -174,18 +174,18 @@ button {
    cursor: pointer;
 }
 
-button.not__loading {
+button.loader__wrapper {
     border: 3px solid #38b6ff;
     background-color: #38b6ff;
     box-shadow: 7px 7px 14px rgb(215, 215, 215);
 }
 
-button.not__loading:hover {
+button.loader__wrapper:hover {
     background-color: #eef8ff;
     color: #38b6ff;
 }
 
-button.not__loading:active {
+button.loader__wrapper:active {
     transform: scale(.95);
 }
 
@@ -198,4 +198,22 @@ button.not__loading:active {
 
 .landing__img {
     max-width: 400px;
+}
+
+.fa-spinner {
+    animation: 1s spin linear infinite;
+    color: #38b6ff;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader__clicked {
+    background-color: black !important;
 }
