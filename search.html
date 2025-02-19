@@ -43,16 +43,53 @@
           <h1 class="nav__heading">Browse our Movies</h1>
           <div class="search__input--wrapper">
             <input
+              onchange="searchMovies(event)"
               class="movie__search--input"
               placeholder="Find your favorite movie"
               type="text"
             />
-            <button onclick="handleLoader()" class="search__btn loader__wrapper">
+            <button
+              onclick="handleLoader()"
+              class="search__btn loader__wrapper"
+            >
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
         </div>
       </nav>
     </header>
+    <section id="welcome">
+      <div class="container">
+        <div class="row">
+          <div class="welcome__description">
+            <h1 class="welcome__title">Welcome to <span class="blue">Flixter! </span>🎬</h1>
+            <p class="welcome__para">
+              Discover the best <span class="blue">movies</span>, <span class="blue">shows</span>, and <span class="blue">hidden gems</span>. Search by title,
+              genre, year, or actor to find your next <span class="blue">cinematic adventure!</span>
+            </p>
+          </div>
+          <figure class="welcome__img--wrapper">
+            <img
+              class="welcome__img"
+              src="Assets/undraw_horror-movie_9020 (1).svg"
+              alt=""
+            />
+          </figure>
+        </div>
+      </div>
+      <div class="movie__search--grid">
+        <div class="search__grid--continer">
+          <div class="search__grid--row">
+            <div class="movies__list">
+              <div class="movie">
+                <div class="movie-card">
+                  <div class="movie-card__container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
