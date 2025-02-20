@@ -12,10 +12,10 @@ async function main(searchTerm) {
 
 function moviesHTML(movie) {
   return `<div class="movie-card">
-            <div class="movie-card__container">
-              <img src= ${movie.Poster} alt=""/>
-              <h3>${movie.Title}</h3>
-              <p><b>${movie.Year}</b></p>
+            <div class="movie-card__wrapper">
+              <img class=movie__img src= ${movie.Poster} alt=""/>
+              <h3 class=movie__title>${movie.Title}</h3>
+              <p class=movie__year><b>${movie.Year}</b></p>
             </div>
           </div>`;
 }
