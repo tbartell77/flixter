@@ -4,10 +4,12 @@ async function main(searchTerm) {
   );
   const moviesData = await movies.json();
   const moviesListEl = document.querySelector(".movies__list");
+  const welcomeRow = document.querySelector("#welcome .row"); // Select the row
 
   moviesListEl.innerHTML = moviesData.Search.map((movie) =>
     moviesHTML(movie)
   ).join("");
+  welcomeRow.style.display = "none"; // Hide the welcome row
 }
 
 function moviesHTML(movie) {
@@ -28,6 +30,10 @@ function searchMovies(event) {
 const loaderWrapper = document.querySelector(".loader__wrapper");
 
 function handleLoader() {
-  loaderWrapper.innerHTML = '<i class="fa-solid fa-spinner"></i>';
+  loaderWrapper.innerHTML = '<i class="fa-solid fa-circle-notch"></i>';
   loaderWrapper.classList += " loader__clicked";
+
+  setTimeout(() => {
+    loaderWrapper.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+  }, 350);
 }
