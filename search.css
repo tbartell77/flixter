@@ -5,6 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Space Grotesk", serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 nav {
@@ -210,7 +212,61 @@ nav {
 .loader__clicked {
   background-color: black;
 }
+.loader__wrapper {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  align-items: center;    /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh;         /* Full screen height */
+  text-align: center;     /* Center text */
+}
 
+.loader--active {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+  padding: 20px;    /* Some padding around the loader */
+  border-radius: 8px; /* Smooth corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+}
+
+.loader {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin-top: 120px;
+   
+}
+
+.loader_text {
+  padding-bottom: 24px;
+  font-size: 42px;
+  animation: loadingEffect 1s infinite; /* Add animation */
+  color: #38b6ff;
+}
+
+@keyframes loadingEffect {
+  0% {
+    opacity: 1; /* Start with lower opacity */
+  }
+  50% {
+    opacity: 0.5; /* Fade in */
+  }
+  100% {
+    opacity: 0; /* Fade out */
+  }
+}
+
+.loader-icon {
+    width: 50px; /* Size of the loader */
+    height: 50px;
+    border: 10px solid #38b6ff; /* Border color */
+    border-top: 10px solid transparent; /* Top border transparent for spinning effect */
+    border-radius: 50%; /* Make it circular */
+    animation: spin 1s linear infinite; /* Spin animation */
+}
 /* Default Screen */
 
 #welcome .row {
@@ -329,7 +385,4 @@ nav {
 .movie__year {
   text-align: center;
   transition: all 300ms ease;
-}
-
-.movie__year {
 }
