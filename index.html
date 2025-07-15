@@ -17,7 +17,12 @@
             src="Assets/crop_logo-removebg-preview.png"
             alt="Flixter-Logo"
           />
-          <div class="nav__links--list">
+          <button class="menu__button" id="menu__button">
+            <span class="menu__button--bar"></span>
+            <span class="menu__button--bar"></span>
+            <span class="menu__button--bar"></span>
+          </button>
+          <div class="nav__links--list" id="nav__links--list">
             <a
               href="#"
               class="nav__link nav__link--anchor link__hover-effect link__hover-effect--blue link__hover-effect--white"
@@ -49,8 +54,8 @@
                 FIND YOUR FAVORITE MOVIES WITH <span class="blue">FLIXTER</span>
               </h2>
               <div class="input__wrapper">
-                <input class="movie__search--input" type="text" placeholder="What do you want to watch?" />
-                <button onclick="handleLoader()" class="loader__wrapper">
+                <input id="landing-search-input" class="movie__search--input" type="text" placeholder="What do you want to watch?" />
+                <button onclick="redirectToSearch()" class="loader__wrapper">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>
@@ -62,5 +67,23 @@
         </div>
       </div>
     </section>
+   <footer>
+      <div class="footer__container">
+        <img class="logo footer__logo" src="Assets/crop_logo-removebg-preview.png" alt="Flixter Logo">
+        <div class="footer__links">
+          <a href="#" class="footer__link">Home</a>
+          <a href="./search.html" class="footer__link">Search</a>
+          <a href="#" class="footer__link">Contact</a>
+        </div>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer__copyright">
+          &copy; 2025 Flixter. All rights reserved.
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

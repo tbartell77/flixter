@@ -34,7 +34,7 @@
             >
             <a
               href="#"
-              class="nav__link nav__link--primary nav__link--anchor link__hover-effect link__hover-effect--blue link__hover-effect--white"
+              class="nav__link nav__link--primary nav__link--anchor"
               >Contact</a
             >
           </div>
@@ -48,15 +48,20 @@
               placeholder="Find your favorite movie"
               type="text"
             />
-            <button
-              class="search__btn loader__wrapper"
-            >
+            <button class="search__btn loader__wrapper">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+            <!-- Sort dropdown -->
+               <select id="sort-select" onchange="sortMoviesByYear()">
+              <option value="default">Sort by Year</option>
+              <option value="asc">Oldest to Newest</option>
+              <option value="desc">Newest to Oldest</option>
+            </select>
           </div>
         </div>
       </nav>
     </header>
+
     <section id="welcome">
       <div class="container">
         <div class="row">
@@ -77,20 +82,38 @@
           <div class="welcome__overlay">
             <i class="fa-solid fa-circle-notch"></i>          
           </div>
-      </div>
-      <div class="movie__search--grid">
-        <div class="search__grid--continer">
-          <div class="search__grid--row">
-            <div class="movies__list">
-              <div class="movie">
-                <div class="movie-card">
-                  <div class="movie-card__wrapper"></div>
+        </div>
+        <div class="movie__search--grid">
+          <div class="search__grid--continer">
+            <div class="search__grid--row">
+              <div class="movies__list">
+                <div class="movie">
+                  <div class="movie-card">
+                    <div class="movie-card__wrapper"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
+    <footer>
+      <div class="footer__container">
+        <img class="logo footer__logo" src="Assets/crop_logo-removebg-preview.png" alt="Flixter Logo">
+        <div class="footer__links">
+          <a href="#" class="footer__link">Home</a>
+          <a href="./search.html" class="footer__link">Search</a>
+          <a href="#" class="footer__link">Contact</a>
+        </div>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer__copyright">
+          &copy; 2025 Flixter. All rights reserved.
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
